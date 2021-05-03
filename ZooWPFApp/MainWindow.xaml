@@ -1,0 +1,36 @@
+﻿<Window x:Class="ZooWPFApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZooWPFApp"
+        mc:Ignorable="d"
+        Title="MainWindow" SizeToContent="WidthAndHeight">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Left">
+            <Label Content="Interval"/>
+            <TextBox Text="{Binding Interval}"/>
+            <Button Content="Start/Stop Timer" Command="{Binding StartStopCmd}"/>
+            <Button Content="Next Step" Command="{Binding StepCmd}"/>
+            <Label Content="Add Animals"/>
+            <Button Content="Add Monkey" Command="{Binding AddAnimalCmd}" CommandParameter="{x:Type local:Monkey}"/>
+            <Button Content="Add Lion" Command="{Binding AddAnimalCmd}" CommandParameter="{x:Type local:Lion}"/>
+            <Button Content="Add Elephant" Command="{Binding AddAnimalCmd}" CommandParameter="{x:Type local:Elephant}"/>
+            <Label Content="Feed"/>
+            <Button Content="Feed Animals" Command="{Binding FeedAnimalsCmd}" CommandParameter="{x:Type local:Animal}"/>
+            <Button Content="Feed Monkeys" Command="{Binding FeedAnimalsCmd}" CommandParameter="{x:Type local:Monkey}"/>
+            <Button Content="Feed Lions" Command="{Binding FeedAnimalsCmd}" CommandParameter="{x:Type local:Lion}"/>
+            <Button Content="Feed Elephants" Command="{Binding FeedAnimalsCmd}" CommandParameter="{x:Type local:Elephant}"/>
+        </StackPanel>
+        <ListBox ItemsSource="{Binding Animals}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding Name}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </DockPanel>
+</Window>

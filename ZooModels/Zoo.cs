@@ -16,7 +16,7 @@ namespace ZooModels {
         public void ElapseTime() {
             foreach (Animal animal in Animals.ToList()) {
                 animal.UseEnergy();
-                if (animal.Energy < 0)
+                if (animal.Energy <= 0)
                     Animals.Remove(animal);
             }
         }

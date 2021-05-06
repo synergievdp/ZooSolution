@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Threading;
+using ZooModels;
 
 namespace ZooWPFApp {
     class MainWindowViewModel {
-        public ObservableCollection<Animal> Animals { get; set; }
+        public Zoo Zoo { get; set; }
         private int interval = 500;
         public int Interval {
             get { return interval; }
@@ -26,7 +27,7 @@ namespace ZooWPFApp {
         public RelayCommand StepCmd { get; set; }
 
         public MainWindowViewModel() {
-            Animals = new();
+            Zoo = new();
             timer = new();
             timer.Tick += Tick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, Interval);
@@ -38,14 +39,9 @@ namespace ZooWPFApp {
         }
 
         private void Tick(object sender, EventArgs e) {
-            foreach(Animal animal in Animals.ToList()) {
-                animal.UseEnergy();
-                Debug.WriteLine($"{animal.Name} ({animal.Energy})");
-                if (animal.Energy < 0)
-                    Animals.Remove(animal);
-            }
+            Zoo.ElapseTime();
 
-            if (Animals.Count == 0)
+            if (Zoo.Animals.Count == 0)
                 StartStop();
         }
 
@@ -58,31 +54,15 @@ namespace ZooWPFApp {
             StepCmd.RaiseCanExecuteChanged();
         }
 
-        private void AddAnimal(Type animal) {
-            Debug.WriteLine(animal);
+        private void AddAnimal(Type animalType) {
+            Debug.WriteLine(animalType);
 
-            if (animal == typeof(Monkey))
-                Animals.Add(new Monkey());
-            else if (animal == typeof(Lion))
-                Animals.Add(new Lion());
-            else if (animal == typeof(Elephant))
-                Animals.Add(new Elephant());
+            Zoo.AddAnimal(animalType);
         }
         private void FeedAnimals(Type animalType) {
             Debug.WriteLine(animalType);
 
-            if (animalType == typeof(Monkey))
-                foreach (Animal monkey in Animals.OfType<Monkey>())
-                    monkey.Eat();
-            else if (animalType == typeof(Lion))
-                foreach (Animal lion in Animals.OfType<Lion>())
-                    lion.Eat();
-            else if (animalType == typeof(Elephant))
-                foreach (Animal elephant in Animals.OfType<Elephant>())
-                    elephant.Eat();
-            else if (animalType == typeof(Animal))
-                foreach (Animal animal in Animals)
-                    animal.Eat();
+            Zoo.FeedAnimals(animalType);
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZooWPFApp {
+namespace ZooModels {
     public abstract class Animal {
         public string Name { get; set; }
         public int Energy { get; set; } = 100;

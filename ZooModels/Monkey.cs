@@ -4,18 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZooWPFApp {
-    sealed class Elephant : Animal {
-
-        public Elephant() {
-            Name = "Elephant";
+namespace ZooModels {
+    public sealed class Monkey : Animal {
+        public Monkey() {
+            Name = "Monkey";
+            Energy = 60;
         }
 
         public override void Eat() {
-            Energy += 50;
+            Energy += 10;
         }
+
         public override void UseEnergy() {
-            Energy -= 5;
+            Energy -= 2;
         }
     }
 }

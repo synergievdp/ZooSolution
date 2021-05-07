@@ -44,8 +44,11 @@ namespace ZooFormsApp
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.intervalBinding = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intervalBinding)).BeginInit();
             this.SuspendLayout();
             // 
             // AddElephant
@@ -172,11 +175,19 @@ namespace ZooFormsApp
             this.listBox2.Size = new System.Drawing.Size(116, 284);
             this.listBox2.TabIndex = 10;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 210);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(48, 27);
+            this.textBox1.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 442);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.listBox1);
@@ -186,7 +197,9 @@ namespace ZooFormsApp
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intervalBinding)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -205,6 +218,8 @@ namespace ZooFormsApp
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.BindingSource intervalBinding;
     }
 }
 

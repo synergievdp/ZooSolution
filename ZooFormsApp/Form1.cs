@@ -16,11 +16,14 @@ namespace ZooFormsApp
         Zoo zoo = new();
         BindingList<Animal> animals;
         Timer timer = new Timer();
+        private int interval = 500;
+        public int Interval { get { return interval; } set { interval = value; timer.Interval = interval; } }
         public Form1()
         {
             InitializeComponent();
             animals = new(zoo.Animals);
             bindingSource1.DataSource = zoo.Animals;
+            textBox1.DataBindings.Add(nameof(Text), this, nameof(Interval));
         }
 
         private void Form1_Load(object sender, EventArgs e)

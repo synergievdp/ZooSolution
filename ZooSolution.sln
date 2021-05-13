@@ -9,7 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooModels", "ZooModels\ZooM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooModelsTest", "ZooModelsTest\ZooModelsTest.csproj", "{1C406516-0D5E-43A8-9E9B-E5079F80ADB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooFormsApp", "ZooFormsApp\ZooFormsApp.csproj", "{F2AD4556-1BA6-42C2-82D8-9E4D8F24CB6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooFormsApp", "ZooFormsApp\ZooFormsApp.csproj", "{F2AD4556-1BA6-42C2-82D8-9E4D8F24CB6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooXamarinApp.Android", "ZooXamarinApp\ZooXamarinApp.Android\ZooXamarinApp.Android.csproj", "{2D250EDB-D62B-4530-A744-075D7B5B5AF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooXamarinApp", "ZooXamarinApp\ZooXamarinApp\ZooXamarinApp.csproj", "{62243488-E2DC-4801-8240-31D633A76500}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooModelsNetStandard", "ZooModelsNetStandard\ZooModelsNetStandard.csproj", "{D8CC0247-D55D-492F-9487-9AF90BFFF3C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,20 @@ Global
 		{F2AD4556-1BA6-42C2-82D8-9E4D8F24CB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2AD4556-1BA6-42C2-82D8-9E4D8F24CB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2AD4556-1BA6-42C2-82D8-9E4D8F24CB6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D250EDB-D62B-4530-A744-075D7B5B5AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D250EDB-D62B-4530-A744-075D7B5B5AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D250EDB-D62B-4530-A744-075D7B5B5AF1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2D250EDB-D62B-4530-A744-075D7B5B5AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D250EDB-D62B-4530-A744-075D7B5B5AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D250EDB-D62B-4530-A744-075D7B5B5AF1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{62243488-E2DC-4801-8240-31D633A76500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62243488-E2DC-4801-8240-31D633A76500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62243488-E2DC-4801-8240-31D633A76500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62243488-E2DC-4801-8240-31D633A76500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8CC0247-D55D-492F-9487-9AF90BFFF3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8CC0247-D55D-492F-9487-9AF90BFFF3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8CC0247-D55D-492F-9487-9AF90BFFF3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8CC0247-D55D-492F-9487-9AF90BFFF3C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

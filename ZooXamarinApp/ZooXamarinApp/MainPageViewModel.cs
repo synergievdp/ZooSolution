@@ -57,14 +57,10 @@ namespace ZooXamarinApp {
         }
 
         private void AddAnimal(Type animalType) {
-            Debug.WriteLine($"Add animal {animalType}");
-
             Zoo.AddAnimal(animalType);
         }
 
         private void FeedAnimals(Type animalType) {
-            Debug.WriteLine($"Feed animals {animalType}");
-
             Zoo.FeedAnimals(animalType);
         }
     }

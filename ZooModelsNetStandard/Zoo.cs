@@ -22,27 +22,14 @@ namespace ZooModels {
         }
 
         public void AddAnimal(Type animalType) {
-            if (animalType == typeof(Monkey))
-                Animals.Add(new Monkey());
-            else if (animalType == typeof(Lion))
-                Animals.Add(new Lion());
-            else if (animalType == typeof(Elephant))
-                Animals.Add(new Elephant());
+            if(Activator.CreateInstance(animalType) is Animal animal)
+                Animals.Add(animal);
         }
 
         public void FeedAnimals(Type animalType) {
-            if (animalType == typeof(Monkey))
-                foreach (Animal monkey in Animals.OfType<Monkey>())
-                    monkey.Eat();
-            else if (animalType == typeof(Lion))
-                foreach (Animal lion in Animals.OfType<Lion>())
-                    lion.Eat();
-            else if (animalType == typeof(Elephant))
-                foreach (Animal elephant in Animals.OfType<Elephant>())
-                    elephant.Eat();
-            else if (animalType == typeof(Animal))
-                foreach (Animal animal in Animals)
-                    animal.Eat();
+            foreach (Animal animal in Animals.OfType<animalType>()) {
+                animal.Eat();
+            }
         }
     }
 }

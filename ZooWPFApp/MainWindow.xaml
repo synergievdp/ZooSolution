@@ -10,8 +10,13 @@
     <Window.DataContext>
         <local:MainWindowViewModel/>
     </Window.DataContext>
-    <DockPanel>
-        <StackPanel DockPanel.Dock="Left">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel DockPanel.Dock="Left" Grid.Column="0">
             <Label Content="Interval"/>
             <TextBox Text="{Binding Interval}"/>
             <Button Content="Start/Stop Timer" Command="{Binding StartStopCmd}"/>
@@ -26,12 +31,20 @@
             <Button Content="Feed Lions" Command="{Binding FeedAnimalsCmd}" CommandParameter="{x:Type model:Lion}"/>
             <Button Content="Feed Elephants" Command="{Binding FeedAnimalsCmd}" CommandParameter="{x:Type model:Elephant}"/>
         </StackPanel>
-        <ListBox ItemsSource="{Binding Zoo.Animals}">
+            <ListBox ItemsSource="{Binding Zoo.Animals}" Grid.Column="1" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Label Content="{Binding Name}" Padding="2"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        <ListBox Grid.Column="2"  ItemsSource="{Binding Zoo.Animals}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Label Content="{Binding Name}"/>
+                    <Label Content="{Binding Energy}" Padding="2"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-    </DockPanel>
+    </Grid>
+    
 </Window>

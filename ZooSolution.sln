@@ -5,17 +5,15 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooWPFApp", "ZooWPFApp\ZooWPFApp.csproj", "{7DEBA59D-54F2-4524-B956-610EEE0C5EB5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooModels", "ZooModels\ZooModels.csproj", "{B18B2E1E-0D52-4B32-A5FC-CC02EAA2517B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooModelsTest", "ZooModelsTest\ZooModelsTest.csproj", "{1C406516-0D5E-43A8-9E9B-E5079F80ADB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooFormsApp", "ZooFormsApp\ZooFormsApp.csproj", "{F2AD4556-1BA6-42C2-82D8-9E4D8F24CB6F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooXamarinApp.Android", "ZooXamarinApp\ZooXamarinApp.Android\ZooXamarinApp.Android.csproj", "{2D250EDB-D62B-4530-A744-075D7B5B5AF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooXamarinApp", "ZooXamarinApp\ZooXamarinApp\ZooXamarinApp.csproj", "{62243488-E2DC-4801-8240-31D633A76500}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooXamarinApp", "ZooXamarinApp\ZooXamarinApp\ZooXamarinApp.csproj", "{62243488-E2DC-4801-8240-31D633A76500}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooModelsNetStandard", "ZooModelsNetStandard\ZooModelsNetStandard.csproj", "{D8CC0247-D55D-492F-9487-9AF90BFFF3C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooModelsNetStandard", "ZooModelsNetStandard\ZooModelsNetStandard.csproj", "{D8CC0247-D55D-492F-9487-9AF90BFFF3C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +25,6 @@ Global
 		{7DEBA59D-54F2-4524-B956-610EEE0C5EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DEBA59D-54F2-4524-B956-610EEE0C5EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DEBA59D-54F2-4524-B956-610EEE0C5EB5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B18B2E1E-0D52-4B32-A5FC-CC02EAA2517B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B18B2E1E-0D52-4B32-A5FC-CC02EAA2517B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B18B2E1E-0D52-4B32-A5FC-CC02EAA2517B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B18B2E1E-0D52-4B32-A5FC-CC02EAA2517B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1C406516-0D5E-43A8-9E9B-E5079F80ADB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1C406516-0D5E-43A8-9E9B-E5079F80ADB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C406516-0D5E-43A8-9E9B-E5079F80ADB9}.Release|Any CPU.ActiveCfg = Release|Any CPU

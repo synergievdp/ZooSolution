@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZooWPFApp"
-        xmlns:model="clr-namespace:ZooModels;assembly=ZooModels"
+        xmlns:model="clr-namespace:ZooModels;assembly=ZooModelsNetStandard"
         mc:Ignorable="d"
         Title="MainWindow" SizeToContent="WidthAndHeight">
     <Window.DataContext>

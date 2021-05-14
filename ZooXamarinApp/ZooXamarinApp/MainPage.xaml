@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ZooXamarinApp"
+             xmlns:models="clr-namespace:ZooModels;assembly=ZooModelsNetStandard"
+             x:Class="ZooXamarinApp.MainPage">
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Grid HeightRequest="300">
+            <Button Text="Add Monkey" Command="{Binding AddAnimalCmd}" CommandParameter="{x:Type models:Monkey}"/>
+            <Button Grid.Row="1" Text="Add Lion" Command="{Binding AddAnimalCmd}" CommandParameter="{x:Type models:Lion}"/>
+            <Button Grid.Row="2" Text="Add Elephant" Command="{Binding AddAnimalCmd}" CommandParameter="{x:Type models:Elephant}"/>
+            <Button Grid.Column="1" Text="Feed Animals" Command="{Binding FeedAnimalsCmd}"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="Feed Monkeys" Command="{Binding FeedAnimalsCmd}" CommandParameter="{x:Type models:Monkey}"/>
+            <Button Grid.Row="2" Grid.Column="1" Text="Feed Lions" Command="{Binding FeedAnimalsCmd}" CommandParameter="{x:Type models:Lion}"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="Feed Elephants" Command="{Binding FeedAnimalsCmd}" CommandParameter="{x:Type models:Elephant}"/>
+
+            <Button Grid.Row="3" Text="Step Timer" Command="{Binding StepCmd}"/>
+            <Button Grid.Row="4" Text="Start/Stop Timer" Command="{Binding StartStopCmd}"/>
+            <Entry Grid.Row="4" Grid.Column="1" Text="{Binding Interval}" Keyboard="Numeric"/>
+        </Grid>
+        
+
+        <ListView ItemsSource="{Binding Zoo.Animals}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="{Binding Name}"/>
+                            <Label Grid.Column="1" Text="{Binding Energy}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

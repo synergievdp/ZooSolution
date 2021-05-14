@@ -18,7 +18,15 @@
         </Grid.ColumnDefinitions>
         <StackPanel DockPanel.Dock="Left" Grid.Column="0">
             <Label Content="Interval"/>
-            <TextBox Text="{Binding Interval}"/>
+            <TextBox>
+                <TextBox.Text>
+                    <Binding Path="Interval">
+                        <Binding.ValidationRules>
+                            <local:PositiveIntegerValidator/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
             <Button Content="Start/Stop Timer" Command="{Binding StartStopCmd}"/>
             <Button Content="Next Step" Command="{Binding StepCmd}"/>
             <Label Content="Add Animals"/>
